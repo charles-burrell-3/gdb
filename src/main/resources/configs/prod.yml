@@ -1,0 +1,9 @@
+serverConfigs:
+  port: 8080
+
+sourceFiles:
+  path: sources/prod
+
+hashConfigs:
+  salt: Th!sN33dsS@lt
+  algorithm: SHA-512

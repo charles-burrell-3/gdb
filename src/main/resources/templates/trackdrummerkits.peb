@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="gbd.css">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <div class="center-descrip">
+        <h1 class="centered-descrip">{{ title }} List {{ used }}</h1>
+            <div class="rTable">
+                <div class="rTableHeading">
+                    <div class="rTableRow">
+                    {% for header in headers %}
+                        <div class="rTableCell">{{ header }}</div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="rTableBody">
+                {% for tdk in tdks %}
+                    <div class="rTableRow font-descrip">
+                        <div class="rTableCell">{{ tdk.name }}</div>
+                        <div class="rTableCell">{{ tdk.drummersKits }}</div>
+                    </div>
+                {% endfor %}
+                {% if most_used_drummer is not empty %}
+                    <div class="rTableRow total_time">
+                        <div class="rTableCell">Most used drummer</div>
+                        <div class="rTableCell">{{ most_used_drummer }}</div>
+                    </div>
+                 {% endif %}
+                {% if most_used_kit is not empty %}
+                    <div class="rTableRow total_time">
+                        <div class="rTableCell">Most Used Kit</div>
+                        <div class="rTableCell">{{ most_used_kit }}</div>
+                    </div>
+                 {% endif %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

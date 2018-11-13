@@ -1,0 +1,9 @@
+serverConfigs:
+  port: 8042
+
+sourceFiles:
+  path: sources/dev
+
+hashConfigs:
+  salt: Th!sN33dsS@lt
+  algorithm: SHA-256
